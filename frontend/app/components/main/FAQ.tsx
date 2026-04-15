@@ -40,7 +40,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="bg-[#fffaf4] py-16 sm:py-20">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-700">
@@ -53,8 +53,8 @@ export default function FAQ() {
           </h2>
         </div>
 
-        {/* FAQ list */}
-        <div className="mt-12 space-y-4">
+        {/* Mobile: dropdowns */}
+        <div className="mt-12 space-y-4 lg:hidden">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
 
@@ -95,6 +95,24 @@ export default function FAQ() {
               </div>
             );
           })}
+        </div>
+
+        {/* Desktop: grid */}
+        <div className="mt-12 hidden gap-6 lg:grid lg:grid-cols-3">
+          {faqItems.map((item, index) => (
+            <div
+              key={index}
+              className="rounded-3xl border border-amber-100 bg-white p-6 shadow-sm"
+            >
+              <h3 className="text-md font-bold text-stone-900">
+                {item.question}
+              </h3>
+
+              <p className="mt-3 text-xs leading-5 text-stone-600 sm:text-xs">
+                {item.answer}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Bottom card */}
