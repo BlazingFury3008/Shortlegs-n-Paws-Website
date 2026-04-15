@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
   { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact"}
 ];
 
 export default function Navbar() {
@@ -19,6 +20,7 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 w-full border-b border-amber-200/60 bg-white/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           {/* Logo / Brand */}
+          {/* Right now a temporary symbol,  */}
           <a
             href="#"
             className="flex items-center gap-3 transition hover:opacity-90"

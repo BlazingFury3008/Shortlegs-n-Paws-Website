@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div id="contact">
+          <div id="contact" className="uppercase">
             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
               Contact
             </h4>
@@ -69,10 +69,10 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-amber-300" />
                 <a
-                  href="mailto:hello@shortlegsnpaws.co.uk"
+                  href="mailto:shortlegs_lisa@hotmail.co.uk"
                   className="transition hover:text-amber-300"
                 >
-                  hello@shortlegsnpaws.co.uk
+                  Shortlegs_lisa@hotmail.co.uk
                 </a>
               </div>
 
@@ -82,13 +82,13 @@ export default function Footer() {
                   href="tel:+440000000000"
                   className="transition hover:text-amber-300"
                 >
-                  00000 000000
+                  NUMBER-OPTIONAL
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-amber-300" />
-                <span>Local area coverage</span>
+                <span>Glasgow</span>
               </div>
             </div>
           </div>
@@ -100,10 +100,10 @@ export default function Footer() {
 
           <div className="flex flex-wrap items-center gap-4">
             <a href="#" className="transition hover:text-amber-300">
-              Privacy Policy
+              Privacy Policy - MOST LIKELY REQUIRED
             </a>
             <a href="#" className="transition hover:text-amber-300">
-              Terms
+              Terms - REQUIRED
             </a>
           </div>
         </div>

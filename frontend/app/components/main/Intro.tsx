@@ -27,23 +27,10 @@ export default function Intro() {
 
             {/* Description */}
             <p className="mt-5 max-w-xl text-lg text-stone-600">
-              Going away? I’ll visit your cat at home, keeping them fed, happy,
+              Going away? I'll visit your cat at home, keeping them fed, happy,
               and stress-free in their own space. No kennels, no disruption —
               just calm, familiar care.
             </p>
-
-            {/* Pricing */}
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <div className="rounded-xl bg-white px-5 py-3 shadow-sm border border-amber-100">
-                <p className="text-sm text-stone-500">1 visit per day</p>
-                <p className="text-xl font-bold text-stone-900">£12</p>
-              </div>
-
-              <div className="rounded-xl bg-white px-5 py-3 shadow-sm border border-amber-100">
-                <p className="text-sm text-stone-500">2 visits per day</p>
-                <p className="text-xl font-bold text-stone-900">£16</p>
-              </div>
-            </div>
 
             {/* CTA */}
             <div className="mt-8 flex flex-wrap gap-4">
@@ -83,7 +70,7 @@ export default function Intro() {
           <div className="relative">
             <div className="overflow-hidden rounded-3xl shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1200&auto=format&fit=crop"
+                src="cats/Maisie.jpg"
                 alt="Happy cat"
                 className="h-full w-full object-cover"
               />
@@ -93,7 +80,7 @@ export default function Intro() {
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-4 shadow-lg border border-amber-100 sm:block">
               <p className="text-sm text-stone-500">Happy visits</p>
               <p className="text-lg font-bold text-stone-900">
-                Calm & Comfortable Cats 🐾
+                Maisie 🐾
               </p>
             </div>
           </div>

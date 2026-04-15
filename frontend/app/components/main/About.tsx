@@ -11,7 +11,7 @@ export default function About() {
         <div className="relative hidden sm:block">
           <div className="overflow-hidden rounded-3xl border border-amber-100 shadow-sm">
             <img
-              src="https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200&auto=format&fit=crop"
+              src="cats/Bleu.jpg"
               alt="Cat sitting and care"
               className="h-[420px] w-full object-cover"
             />
@@ -20,7 +20,7 @@ export default function About() {
           <div className="absolute -bottom-5 left-6 rounded-2xl border border-amber-100 bg-white px-5 py-4 shadow-lg">
             <p className="text-sm text-stone-500">Calm, caring visits</p>
             <p className="text-lg font-bold text-stone-900">
-              Keeping cats happy at home
+              Bleu
             </p>
           </div>
         </div>

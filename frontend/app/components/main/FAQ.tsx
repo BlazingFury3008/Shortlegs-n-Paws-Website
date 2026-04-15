@@ -15,14 +15,14 @@ const faqItems = [
       "Yes. Shortlegs-N-Paws is a home visit cat sitting service, so your cat stays in their familiar environment while receiving care.",
   },
   {
-    question: "Will I get updates while I’m away?",
+    question: "Will I get updates while I'm away?",
     answer:
       "Yes, updates can be provided after visits so you know your cat has been checked on, cared for, and is doing well.",
   },
   {
     question: "Can you care for shy or nervous cats?",
     answer:
-      "Yes. Visits are tailored to each cat’s temperament. Some cats enjoy play and attention, while others simply prefer a calm presence and their routine being maintained.",
+      "Yes. Visits are tailored to each cat's temperament. Some cats enjoy play and attention, while others simply prefer a calm presence and their routine being maintained.",
   },
   {
     question: "How do I book?",
@@ -81,7 +81,9 @@ export default function FAQ() {
 
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    isOpen
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
@@ -101,15 +103,17 @@ export default function FAQ() {
             Still have a question?
           </h3>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-stone-600 sm:text-base">
-            Get in touch to ask about availability, discuss your cat’s needs,
-            or find the best visit option for your trip.
+            Get in touch to ask about availability, discuss your cat’s needs, or
+            find the best visit option for your trip.
           </p>
 
           <a
-            href="#contact"
+            href="mailto:shortlegs_lisa@hotmail.co.uk?subject=Cat Sitting Enquiry"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-5 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-amber-600"
           >
-            Contact Shortlegs-N-Paws
+            Contact Me
           </a>
         </div>
       </div>

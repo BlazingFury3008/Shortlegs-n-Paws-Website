@@ -1,35 +1,56 @@
 "use client";
 
-import React from "react";
-import { Check, PawPrint, Clock3, Camera } from "lucide-react";
+import React, { ReactNode } from "react";
+import { Check, PawPrint, Clock3, Camera, Syringe } from "lucide-react";
+
+type ServiveOptionType = {
+  title: string;
+  price: string;
+  subtitle: string;
+  highlight: boolean; // Incase further deals are put on, such as 3 visits a day or 4 in a week etc and they want to be highlighted
+};
 
 const serviceOptions = [
   {
     title: "1 Visit Per Day",
     price: "£12",
     subtitle: "Perfect for shorter trips or more independent cats.",
-    features: [
-      "Fresh food and water",
-      "Litter tray check and tidy",
-      "Playtime and company",
-      "General wellbeing check",
-      "Message update after visit",
-    ],
     highlight: false,
   },
   {
     title: "2 Visits Per Day",
     price: "£16",
     subtitle: "Ideal for cats who need extra attention and routine.",
-    features: [
-      "Morning and evening visits",
-      "Fresh food and water",
-      "Litter tray check and tidy",
-      "Playtime and companionship",
-      "Wellbeing check each visit",
-      "Updates and photos when possible",
-    ],
-    highlight: true,
+    highlight: false,
+  },
+];
+
+type IncludeType = {
+  title: string;
+  text: string;
+  icon: ReactNode;
+};
+
+const includes: IncludeType[] = [
+  {
+    title: "Flexible routine",
+    text: "Visits fit around your cat's normal feeding and comfort routine as closely as possible.",
+    icon: <Clock3 className="h-5 w-5" />,
+  },
+  {
+    title: "Updates for peace of mind",
+    text: "You can receive updates after visits so you know your cat is safe, settled, and looked after.",
+    icon: <Camera className="h-5 w-5" />,
+  },
+  {
+    title: "Care at home",
+    text: "Your cat stays in their familiar environment, helping reduce stress while you're away.",
+    icon: <PawPrint className="h-5 w-5" />,
+  },
+  {
+    title: "Extra care when needed",
+    text: "If your cat requires medication or extra care, it is provided within the standard pricing.",
+    icon: <Syringe className="h-5 w-5" />,
   },
 ];
 
@@ -88,19 +109,6 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="mt-6 space-y-3">
-                {service.features.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3">
-                    <div className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-amber-100 text-amber-700">
-                      <Check className="h-4 w-4" />
-                    </div>
-                    <p className="text-sm text-stone-700 sm:text-base">
-                      {feature}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
               <a
                 href="#contact"
                 className={`mt-8 inline-flex rounded-full px-5 py-3 text-sm font-semibold transition ${
@@ -116,45 +124,25 @@ export default function Services() {
         </div>
 
         {/* Included / Extra reassurance */}
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
-          <div className="rounded-2xl border border-amber-100 bg-white p-5 shadow-sm">
-            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-700">
-              <Clock3 className="h-5 w-5" />
-            </div>
-            <h4 className="text-base font-semibold text-stone-900">
-              Flexible routine
-            </h4>
-            <p className="mt-2 text-sm leading-6 text-stone-600">
-              Visits fit around your cat’s normal feeding and comfort routine as
-              closely as possible.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-amber-100 bg-white p-5 shadow-sm">
-            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-700">
-              <Camera className="h-5 w-5" />
-            </div>
-            <h4 className="text-base font-semibold text-stone-900">
-              Updates for peace of mind
-            </h4>
-            <p className="mt-2 text-sm leading-6 text-stone-600">
-              You can receive updates after visits so you know your cat is safe,
-              settled, and looked after.
-            </p>
-          </div>
-
-          <div className="rounded-2xl border border-amber-100 bg-white p-5 shadow-sm">
-            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-700">
-              <PawPrint className="h-5 w-5" />
-            </div>
-            <h4 className="text-base font-semibold text-stone-900">
-              Care at home
-            </h4>
-            <p className="mt-2 text-sm leading-6 text-stone-600">
-              Your cat stays in their familiar environment, helping reduce
-              stress while you’re away.
-            </p>
-          </div>
+        <div className="mt-12 grid gap-4 md:grid-cols-4">
+          {includes.map((val) => {
+            return (
+              <div
+                className="rounded-2xl border border-amber-100 bg-white p-5 shadow-sm"
+                key={val.title}
+              >
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                  {val.icon}
+                </div>
+                <h4 className="text-base font-semibold text-stone-900">
+                  {val.title}
+                </h4>
+                <p className="mt-2 text-sm leading-6 text-stone-600">
+                  {val.text}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
