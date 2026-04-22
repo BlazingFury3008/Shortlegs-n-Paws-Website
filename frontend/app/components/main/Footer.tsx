@@ -2,6 +2,7 @@
 
 import React from "react";
 import { PawPrint, Mail, Phone, MapPin } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 
 const footerLinks = [
   { label: "Services", href: "#services" },
@@ -72,23 +73,23 @@ export default function Footer() {
                   href="mailto:shortlegs_lisa@hotmail.co.uk"
                   className="transition hover:text-amber-300"
                 >
-                  Shortlegs_lisa@hotmail.co.uk
+                  EMAIL
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-amber-300" />
+                <BsWhatsapp className="h-4 w-4 text-amber-300" />
                 <a
-                  href="tel:+440000000000"
+                  href="https://wa.me/447568073267"
                   className="transition hover:text-amber-300"
                 >
-                  NUMBER-OPTIONAL
+                  Whatsapp
                 </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-amber-300" />
-                <span>Glasgow</span>
+                <span>Greater Glasgow</span>
               </div>
             </div>
           </div>
@@ -100,7 +101,7 @@ export default function Footer() {
 
           <div className="flex flex-wrap items-center gap-4">
             <a href="#" className="transition hover:text-amber-300">
-              Privacy Policy - MOST LIKELY REQUIRED
+              Privacy Policy - REQUIRED
             </a>
             <a href="#" className="transition hover:text-amber-300">
               Terms - REQUIRED

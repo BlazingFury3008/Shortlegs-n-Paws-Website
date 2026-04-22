@@ -19,14 +19,14 @@ export default function Page() {
           <Intro />
         </section>
 
-        {/* Services */}
-        <section id="services" className="scroll-mt-24">
-          <Services />
-        </section>
-
         {/* About */}
         <section id="about" className="scroll-mt-24">
           <About />
+        </section>
+
+        {/* Services */}
+        <section id="services" className="scroll-mt-24">
+          <Services />
         </section>
 
         {/* Gallery */}

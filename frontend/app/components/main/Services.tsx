@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import { Check, PawPrint, Clock3, Camera, Syringe } from "lucide-react";
+import { Check, PawPrint, Clock3, Camera, Syringe, Home, Heart } from "lucide-react";
 import { serviceOptions } from "../data";
 
 
@@ -15,22 +15,22 @@ type IncludeType = {
 const includes: IncludeType[] = [
   {
     title: "Flexible routine",
-    text: "Visits fit around your cat's normal feeding and comfort routine as closely as possible.",
+    text: "Visits are scheduled to match your pet's normal routine as closely as possible.",
     icon: <Clock3 className="h-5 w-5" />,
   },
   {
-    title: "Updates for peace of mind",
-    text: "You can receive updates after visits so you know your cat is safe, settled, and looked after.",
-    icon: <Camera className="h-5 w-5" />,
+    title: "Time & attention",
+    text: "I spend time with your pets, gaining their trust through petting, playing, and making sure they feel comfortable.",
+    icon: <Heart className="h-5 w-5" />,
   },
   {
-    title: "Care at home",
-    text: "Your cat stays in their familiar environment, helping reduce stress while you're away.",
+    title: "Unrushed visits",
+    text: "No visit is rushed - I take the time to ensure your pets are well cared for and well fed.",
     icon: <PawPrint className="h-5 w-5" />,
   },
   {
-    title: "Extra care when needed",
-    text: "If your cat requires medication or extra care, it is provided within the standard pricing.",
+    title: "Additional care",
+    text: "I am experienced in giving insulin to diabetic cats, so you can feel confident your pets are in safe hands.",
     icon: <Syringe className="h-5 w-5" />,
   },
 ];

@@ -5,8 +5,9 @@ import { Menu, X, PawPrint } from "lucide-react";
 import { serviceOptions } from "../data";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
+
+  { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
   { label: "FAQ", href: "#faq" },
@@ -23,7 +24,10 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 w-full border-b border-amber-200/60 bg-white/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 transition hover:opacity-90">
+          <a
+            href="#"
+            className="flex items-center gap-3 transition hover:opacity-90"
+          >
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-700 shadow-sm">
               <PawPrint className="h-5 w-5" />
             </div>
@@ -54,10 +58,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden items-center gap-3 md:flex">
             <div className="rounded-full bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700">
-              From{" "}
-              <span className="font-bold text-stone-900">
-                £{minPrice}
-              </span>
+              From <span className="font-bold text-stone-900">£{minPrice}</span>
             </div>
             <a
               href="#services"

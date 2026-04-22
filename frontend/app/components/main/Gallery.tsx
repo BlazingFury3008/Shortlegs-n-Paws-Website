@@ -6,40 +6,40 @@ import GalleryCard from "../GalleryCard";
 
 const galleryImages = [
   {
-    src: "/cats/Floppy.jpg",
-    alt: "Floppy during a visit",
-    title: "Calm home visits",
-    subtitle: "'Floppy' during a visit",
+    src: "/cats/Image1.jpg",
+    alt: "Grey cat sitting comfortably on a perch",
+    title: "Calm, comfortable visits",
+    subtitle: "Taking time to help each cat feel relaxed and at ease.",
   },
   {
-    src: "/cats/Teddy.jpg",
-    alt: "Curious cat looking at camera",
-    title: "Gentle attention",
-    subtitle: "Visits tailored to each cat's personality.",
+    src: "/cats/Image2.jpg",
+    alt: "Fluffy ginger and white cat resting",
+    title: "Time to settle and relax",
+    subtitle: "Allowing your cat space to feel safe and comfortable.",
   },
   {
-    src: "/cats/Teddy.jpg",
-    alt: "Cat being gently looked after",
-    title: "Daily care",
-    subtitle: "Food, water, litter, and wellbeing checks.",
+    src: "/cats/Image7.jpeg",
+    alt: "Black and white cat resting on a bed",
+    title: "Keeping routines familiar",
+    subtitle: "Helping your cat stay settled in their own home.",
   },
   {
-    src: "/cats/Teddy.jpg",
-    alt: "Cat resting comfortably indoors",
-    title: "Stress-free routine",
-    subtitle: "Helping cats stay settled while you are away.",
+    src: "/cats/Image8.jpeg",
+    alt: "White cat looking up close",
+    title: "Gentle, one-to-one care",
+    subtitle: "Building trust through calm and attentive visits.",
   },
   {
-    src: "/cats/Teddy.jpg",
-    alt: "Playful cat close-up",
-    title: "Play and company",
-    subtitle: "A little fun and companionship during each visit.",
+    src: "/cats/Image9.jpeg",
+    alt: "Curious cat reaching up",
+    title: "Play and interaction",
+    subtitle: "Engaging with your cat in a way that suits them.",
   },
   {
-    src: "/cats/Teddy.jpg",
-    alt: "Cat sitting calmly by a window",
-    title: "Peace of mind",
-    subtitle: "Updates available so owners feel reassured.",
+    src: "/cats/Image10.jpeg",
+    alt: "Cat being stroked by a window",
+    title: "Affection and reassurance",
+    subtitle: "Plenty of attention, care, and comforting interaction.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function Gallery() {
   }
 
   return (
-    <section className="bg-[#fffaf4] py-4 sm:py-20">
+    <section className="bg-[#fffaf4] py-4 sm:py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-700">

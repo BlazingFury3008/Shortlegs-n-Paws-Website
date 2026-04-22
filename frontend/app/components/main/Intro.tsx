@@ -70,7 +70,7 @@ export default function Intro() {
           <div className="relative">
             <div className="overflow-hidden rounded-3xl shadow-xl">
               <img
-                src="cats/Maisie.jpg"
+                src="cats/Image3.jpg"
                 alt="Happy cat"
                 className="h-full w-full object-cover"
               />
