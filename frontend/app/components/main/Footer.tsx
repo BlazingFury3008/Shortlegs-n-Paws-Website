@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div id="contact" className="uppercase">
+          <div className="uppercase">
             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
               Contact
             </h4>
@@ -106,6 +106,9 @@ export default function Footer() {
               Terms - REQUIRED
             </a>
           </div>
+          <a href="https://blazingfury3008.github.io" className="underline">
+            Website designed and managed by A Taylor
+          </a>
         </div>
       </div>
     </footer>

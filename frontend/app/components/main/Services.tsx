@@ -2,28 +2,9 @@
 
 import React, { ReactNode } from "react";
 import { Check, PawPrint, Clock3, Camera, Syringe } from "lucide-react";
+import { serviceOptions } from "../data";
 
-type ServiveOptionType = {
-  title: string;
-  price: string;
-  subtitle: string;
-  highlight: boolean; // Incase further deals are put on, such as 3 visits a day or 4 in a week etc and they want to be highlighted
-};
 
-const serviceOptions = [
-  {
-    title: "1 Visit Per Day",
-    price: "£12",
-    subtitle: "Perfect for shorter trips or more independent cats.",
-    highlight: false,
-  },
-  {
-    title: "2 Visits Per Day",
-    price: "£16",
-    subtitle: "Ideal for cats who need extra attention and routine.",
-    highlight: false,
-  },
-];
 
 type IncludeType = {
   title: string;
@@ -56,7 +37,7 @@ const includes: IncludeType[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-[#fffaf4] py-16 sm:py-20">
+    <section className="bg-[#fffaf4] py-4 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
@@ -99,7 +80,7 @@ export default function Services() {
 
                 <div className="mt-3 flex items-end gap-2">
                   <span className="text-4xl font-extrabold text-amber-600">
-                    {service.price}
+                    £{service.price}
                   </span>
                   <span className="pb-1 text-sm text-stone-500">per day</span>
                 </div>

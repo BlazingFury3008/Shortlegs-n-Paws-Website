@@ -39,7 +39,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="bg-[#fffaf4] py-16 sm:py-20">
+    <section className="bg-[#fffaf4] py-4 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
@@ -116,24 +116,26 @@ export default function FAQ() {
         </div>
 
         {/* Bottom card */}
-        <div className="mt-10 rounded-3xl border border-amber-100 bg-white p-6 text-center shadow-sm sm:p-8">
-          <h3 className="text-xl font-bold text-stone-900">
-            Still have a question?
-          </h3>
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-stone-600 sm:text-base">
-            Get in touch to ask about availability, discuss your cat’s needs, or
-            find the best visit option for your trip.
-          </p>
+        <section id="contact" className="py-4">
+          <div className="mt-10 rounded-3xl border border-amber-100 bg-white p-6 text-center shadow-sm sm:p-8">
+            <h3 className="text-xl font-bold text-stone-900">
+              Still have a question?
+            </h3>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-stone-600 sm:text-base">
+              Get in touch to ask about availability, discuss your cat’s needs,
+              or find the best visit option for your trip.
+            </p>
 
-          <a
-            href="mailto:shortlegs_lisa@hotmail.co.uk?subject=Cat Sitting Enquiry"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-amber-600"
-          >
-            Contact Me
-          </a>
-        </div>
+            <a
+              href="mailto:shortlegs_lisa@hotmail.co.uk?subject=Cat Sitting Enquiry"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-amber-600"
+            >
+              Contact Me
+            </a>
+          </div>
+        </section>
       </div>
     </section>
   );

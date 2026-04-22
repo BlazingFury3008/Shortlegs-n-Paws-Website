@@ -63,7 +63,7 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="bg-[#fffaf4] py-16 sm:py-20">
+    <section className="bg-[#fffaf4] py-4 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-700">

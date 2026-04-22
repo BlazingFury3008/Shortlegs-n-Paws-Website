@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Menu, X, PawPrint } from "lucide-react";
+import { serviceOptions } from "../data";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -9,29 +10,27 @@ const navLinks = [
   { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact"}
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const minPrice = Math.min(...serviceOptions.map((v) => v.price));
+
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-amber-200/60 bg-white/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          {/* Logo / Brand */}
-          {/* Right now a temporary symbol,  */}
-          <a
-            href="#"
-            className="flex items-center gap-3 transition hover:opacity-90"
-          >
+          {/* Logo */}
+          <a href="#" className="flex items-center gap-3 transition hover:opacity-90">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-700 shadow-sm">
               <PawPrint className="h-5 w-5" />
             </div>
 
             <div className="leading-tight">
               <h1 className="text-lg font-extrabold tracking-tight text-stone-900 sm:text-xl">
-                Shortlegs-N-Paws
+                Shortlegs N' Paws
               </h1>
               <p className="text-xs text-stone-500">
                 Friendly, reliable cat sitting
@@ -55,7 +54,10 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden items-center gap-3 md:flex">
             <div className="rounded-full bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700">
-              From <span className="font-bold text-stone-900">£12/day</span>
+              From{" "}
+              <span className="font-bold text-stone-900">
+                £{minPrice}
+              </span>
             </div>
             <a
               href="#services"
@@ -80,9 +82,8 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`fixed inset-x-0 top-[73px] z-40 border-b border-amber-200 bg-white/95 px-4 py-4 backdrop-blur-xl md:hidden
-  transform transition-all duration-300 ease-in-out
-  ${open ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0 pointer-events-none"}
-`}
+        transform transition-all duration-300 ease-in-out
+        ${open ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0 pointer-events-none"}`}
       >
         <nav className="flex flex-col gap-2">
           {navLinks.map((link) => (
@@ -96,11 +97,12 @@ export default function Navbar() {
             </a>
           ))}
 
+          {/* Price */}
           <div className="mt-2 rounded-xl bg-stone-100 px-4 py-3 text-sm text-stone-700">
-            <span className="font-semibold text-stone-900">Pricing:</span> £12
-            for 1 daily visit / £16 for 2 daily visits
+            From <span className="font-bold text-stone-900">£{minPrice}</span>
           </div>
 
+          {/* CTA */}
           <a
             href="#services"
             onClick={() => setOpen(false)}

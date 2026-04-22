@@ -5,8 +5,10 @@ import { Heart, Home, ShieldCheck } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="bg-white py-16 sm:py-20">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+    <section className="bg-white py-4 sm:py-20">
+      <div
+        className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8"
+      >
         {/* Image / visual side */}
         <div className="relative hidden sm:block">
           <div className="overflow-hidden rounded-3xl border border-amber-100 shadow-sm">
@@ -19,9 +21,7 @@ export default function About() {
 
           <div className="absolute -bottom-5 left-6 rounded-2xl border border-amber-100 bg-white px-5 py-4 shadow-lg">
             <p className="text-sm text-stone-500">Calm, caring visits</p>
-            <p className="text-lg font-bold text-stone-900">
-              Bleu
-            </p>
+            <p className="text-lg font-bold text-stone-900">Bleu</p>
           </div>
         </div>
 
