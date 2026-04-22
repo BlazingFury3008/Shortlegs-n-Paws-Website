@@ -100,8 +100,8 @@ export default function Footer() {
           <p>© 2026 Shortlegs-N-Paws. All rights reserved.</p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <a href="#" className="transition hover:text-amber-300">
-              Privacy Policy - REQUIRED
+            <a href="/privacy" className="transition hover:text-amber-300">
+              Privacy Policy
             </a>
             <a href="#" className="transition hover:text-amber-300">
               Terms - REQUIRED
@@ -110,6 +110,7 @@ export default function Footer() {
           <a href="https://blazingfury3008.github.io" className="underline">
             Website designed and managed by A Taylor
           </a>
+          <a href="https://www.flaticon.com/free-icons/paw" title="paw icons">Paw icons created by Mihimihi - Flaticon</a>
         </div>
       </div>
     </footer>

@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Shortlegs-N-Paws | Cat Sitting Services",
     description:
       "Friendly home visits for cats. Reliable, calm care while you're away.",
-    images: ["/cats/Floppy.jpg"],
+    images: ["/cats/Image3.jpg"],
   },
 
   icons: {

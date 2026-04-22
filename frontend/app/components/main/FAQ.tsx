@@ -1,7 +1,7 @@
-"use client";
-
+"use client"
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown, HelpCircle, Mail } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 
 const faqItems = [
   {
@@ -39,11 +39,10 @@ export default function FAQ() {
   }
 
   return (
-    <section className="bg-[#fffaf4] py-4 sm:py-20">
+    <section className="bg-[#fffaf4] py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-700">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-sm font-medium text-amber-700">
             <HelpCircle className="h-4 w-4" />
             FAQ
           </div>
@@ -51,9 +50,13 @@ export default function FAQ() {
           <h2 className="text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl">
             Frequently asked questions
           </h2>
+
+          <p className="mt-4 text-base leading-7 text-stone-600">
+            Everything you may want to know about visits, updates, and how care
+            is tailored to your cat.
+          </p>
         </div>
 
-        {/* Mobile: dropdowns */}
         <div className="mt-12 space-y-4 lg:hidden">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
@@ -61,7 +64,7 @@ export default function FAQ() {
             return (
               <div
                 key={index}
-                className="overflow-hidden rounded-2xl border border-amber-100 bg-white shadow-sm"
+                className="overflow-hidden rounded-2xl border border-amber-100 bg-white shadow-sm transition"
               >
                 <button
                   type="button"
@@ -97,43 +100,53 @@ export default function FAQ() {
           })}
         </div>
 
-        {/* Desktop: grid */}
         <div className="mt-12 hidden gap-6 lg:grid lg:grid-cols-3">
           {faqItems.map((item, index) => (
             <div
               key={index}
-              className="rounded-3xl border border-amber-100 bg-white p-6 shadow-sm"
+              className="rounded-3xl border border-amber-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
-              <h3 className="text-md font-bold text-stone-900">
+              <h3 className="text-lg font-bold text-stone-900">
                 {item.question}
               </h3>
 
-              <p className="mt-3 text-xs leading-5 text-stone-600 sm:text-xs">
+              <p className="mt-3 text-sm leading-7 text-stone-600">
                 {item.answer}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Bottom card */}
-        <section id="contact" className="py-4">
-          <div className="mt-10 rounded-3xl border border-amber-100 bg-white p-6 text-center shadow-sm sm:p-8">
-            <h3 className="text-xl font-bold text-stone-900">
+        <section id="contact" className="pt-8 sm:pt-10">
+          <div className="rounded-3xl border border-amber-100 bg-white p-6 text-center shadow-sm sm:p-8">
+            <h3 className="text-xl font-bold text-stone-900 sm:text-2xl">
               Still have a question?
             </h3>
+
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-stone-600 sm:text-base">
-              Get in touch to ask about availability, discuss your cat’s needs,
-              or find the best visit option for your trip.
+              Get in touch to ask about availability, discuss your cat&apos;s
+              needs, or find the best visit option for your trip.
             </p>
 
-            <a
-              href="mailto:shortlegs_lisa@hotmail.co.uk?subject=Cat Sitting Enquiry"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-amber-600"
-            >
-              Contact Me
-            </a>
+            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href="mailto:shortlegs_lisa@hotmail.co.uk?subject=Cat%20Sitting%20Enquiry"
+                className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-amber-600"
+              >
+                <Mail className="mr-2 h-4 w-4" />
+                Contact by Email
+              </a>
+
+              <a
+                href="https://wa.me/447568073267"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-emerald-200 bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
+              >
+                <BsWhatsapp className="mr-2 h-4 w-4" />
+                Contact on WhatsApp
+              </a>
+            </div>
           </div>
         </section>
       </div>

@@ -86,5 +86,5 @@ Helpline number: 0303 123 1113
 
 Website: https://www.ico.org.uk/make-a-complaint
 
-Last updated
+Last updated 22/04/2026
 `
