@@ -12,7 +12,7 @@ const faqItems = [
   {
     question: "Do cats stay in their own home?",
     answer:
-      "Yes. Shortlegs-N-Paws is a home visit cat sitting service, so your cat stays in their familiar environment while receiving care.",
+      "Yes, I do a home visits instead of taking your cat(s) into my home, so your cat stays in their familiar environment while receiving care.",
   },
   {
     question: "Will I get updates while I'm away?",

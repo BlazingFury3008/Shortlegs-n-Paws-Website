@@ -26,7 +26,7 @@ export default function Footer() {
 
               <div>
                 <h3 className="text-xl font-bold tracking-tight">
-                  Shortlegs-N-Paws
+                  Shortlegs N' Paws
                 </h3>
                 <p className="text-sm text-stone-300">
                   Friendly, reliable cat sitting
