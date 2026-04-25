@@ -103,9 +103,6 @@ export default function Footer() {
             <a href="/privacy" className="transition hover:text-amber-300">
               Privacy Policy
             </a>
-            <a href="#" className="transition hover:text-amber-300">
-              Terms - REQUIRED
-            </a>
           </div>
           <a href="https://blazingfury3008.github.io" className="underline">
             Website designed and managed by A Taylor

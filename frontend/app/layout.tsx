@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Shortlegs-N-Paws",
   },
   description:
-    "Friendly and reliable cat sitting services. Home visits to keep your cat happy, fed, and comfortable while you're away. From £12 per day.",
+    "Friendly and reliable cat sitting services. Home visits to keep your cat happy, fed, and comfortable while you're away. From £14 per day.",
 
   keywords: [
     "cat sitting",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/cats/Floppy.jpg", // replace with best photo
+        url: "/cats/Image3.jpg", // replace with best photo
         width: 1200,
         height: 630,
         alt: "Shortlegs-N-Paws cat sitting",
