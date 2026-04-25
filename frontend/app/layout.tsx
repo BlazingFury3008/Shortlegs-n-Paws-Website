@@ -12,13 +12,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://shortlegsnpaws.co.uk";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+
   title: {
     default: "Shortlegs-N-Paws | Cat Sitting Services",
     template: "%s | Shortlegs-N-Paws",
   },
+
   description:
-    "Friendly and reliable cat sitting services. Home visits to keep your cat happy, fed, and comfortable while you're away. From £14 per day.",
+    "Friendly and reliable cat sitting services. Calm home visits to keep your cat happy, fed, and comfortable while you're away. From £14 per day.",
 
   keywords: [
     "cat sitting",
@@ -27,24 +32,31 @@ export const metadata: Metadata = {
     "home visits",
     "pet services",
     "local cat sitter",
+    "Shortlegs-N-Paws",
   ],
 
   authors: [{ name: "Shortlegs-N-Paws" }],
+  creator: "Shortlegs-N-Paws",
+  publisher: "Shortlegs-N-Paws",
+
+  alternates: {
+    canonical: siteUrl,
+  },
 
   openGraph: {
     title: "Shortlegs-N-Paws | Cat Sitting Services",
     description:
-      "Calm, caring home visits for cats. Keep your pet comfortable while you're away. From £12 per day.",
-    url: "https://shortlegsnpaws.co.uk", // update when live
+      "Calm, caring home visits for cats. Reliable cat sitting while you're away. From £14 per day.",
+    url: siteUrl,
     siteName: "Shortlegs-N-Paws",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "/cats/Image3.jpg", // replace with best photo
+        url: "/cats/Image3.jpg",
         width: 1200,
         height: 630,
-        alt: "Shortlegs-N-Paws cat sitting",
+        alt: "A cat being cared for by Shortlegs-N-Paws",
       },
     ],
   },
@@ -53,15 +65,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shortlegs-N-Paws | Cat Sitting Services",
     description:
-      "Friendly home visits for cats. Reliable, calm care while you're away.",
+      "Friendly home visits for cats. Reliable, calm care while you're away. From £14 per day.",
     images: ["/cats/Image3.jpg"],
   },
 
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
-
-  metadataBase: new URL("https://shortlegsnpaws.co.uk"), // update when live
 };
 
 export default function RootLayout({
