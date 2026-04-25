@@ -144,7 +144,7 @@ export default function FAQ() {
                 className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-emerald-200 bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-600"
               >
                 <BsWhatsapp className="mr-2 h-4 w-4" />
-                Contact on WhatsApp
+                Message on WhatsApp
               </a>
             </div>
           </div>

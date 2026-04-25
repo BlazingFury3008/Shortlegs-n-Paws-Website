@@ -1,10 +1,13 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import { Check, PawPrint, Clock3, Camera, Syringe, Home, Heart } from "lucide-react";
+import {
+  PawPrint,
+  Clock3,
+  Syringe,
+  Heart,
+} from "lucide-react";
 import { serviceOptions } from "../data";
-
-
 
 type IncludeType = {
   title: string;
@@ -37,7 +40,7 @@ const includes: IncludeType[] = [
 
 export default function Services() {
   return (
-    <section className="bg-[#fffaf4] py-4 sm:py-20">
+    <section className="bg-[#fffaf4] py-4 sm:py-20" id="services">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
@@ -106,24 +109,37 @@ export default function Services() {
 
         {/* Included / Extra reassurance */}
         <div className="mt-12 grid gap-4 md:grid-cols-4">
-          {includes.map((val) => {
-            return (
-              <div
-                className="rounded-2xl border border-amber-100 bg-white p-5 shadow-sm"
-                key={val.title}
-              >
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-700">
-                  {val.icon}
-                </div>
-                <h4 className="text-base font-semibold text-stone-900">
-                  {val.title}
-                </h4>
-                <p className="mt-2 text-sm leading-6 text-stone-600">
-                  {val.text}
-                </p>
+          {includes.map((val) => (
+            <div
+              className="rounded-2xl border border-amber-100 bg-white p-5 shadow-sm"
+              key={val.title}
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                {val.icon}
               </div>
-            );
-          })}
+
+              <h4 className="text-base font-semibold text-stone-900">
+                {val.title}
+              </h4>
+
+              <p className="mt-2 text-sm leading-6 text-stone-600">
+                {val.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Cancellation Policy */}
+        <div className="mt-10">
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900 shadow-sm">
+            <p className="font-semibold">Cancellation Policy</p>
+
+            <p className="mt-2 leading-6">
+              Please note that cancellations made within 3 days of the booking
+              date may not be eligible for a full refund, as time will have been
+              reserved specifically for your visit.
+            </p>
+          </div>
         </div>
       </div>
     </section>

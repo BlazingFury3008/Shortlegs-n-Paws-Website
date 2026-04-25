@@ -32,7 +32,7 @@ export default function Navbar() {
               <PawPrint className="h-5 w-5" />
             </div>
 
-            <div className="leading-tight">
+            <div className="leading-tight ">
               <h1 className="text-lg font-extrabold tracking-tight text-stone-900 sm:text-xl">
                 Shortlegs N' Paws
               </h1>
@@ -43,7 +43,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Links */}
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-4 md:flex max-w-[90%]">
             {navLinks.map((link) => (
               <a
                 key={link.label}
