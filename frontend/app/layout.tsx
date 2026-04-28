@@ -19,20 +19,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Shortlegs-N-Paws | Cat Sitting Services",
+    default: "Shortlegs-N-Paws | Cat Sitting in Glasgow",
     template: "%s | Shortlegs-N-Paws",
   },
 
   description:
-    "Friendly and reliable cat sitting services. Calm home visits to keep your cat happy, fed, and comfortable while you're away. From £14 per day.",
+    "Friendly and reliable cat sitting in Glasgow. Calm home visits to keep your cat happy, fed, and comfortable while you're away. From £14 per day.",
 
   keywords: [
-    "cat sitting",
-    "pet sitting",
-    "cat care",
-    "home visits",
-    "pet services",
-    "local cat sitter",
+    "cat sitting Glasgow",
+    "cat sitter Glasgow",
+    "pet sitting Glasgow",
+    "cat care Glasgow",
+    "home cat visits Glasgow",
+    "Glasgow cat sitter",
+    "cat feeding Glasgow",
     "Shortlegs-N-Paws",
   ],
 
@@ -49,9 +50,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Shortlegs-N-Paws | Cat Sitting Services",
+    title: "Shortlegs-N-Paws | Cat Sitting in Glasgow",
     description:
-      "Calm, caring home visits for cats. Reliable cat sitting while you're away. From £14 per day.",
+      "Calm, caring home visits for cats in Glasgow. Reliable cat sitting while you're away. From £14 per day.",
     url: siteUrl,
     siteName: "Shortlegs-N-Paws",
     locale: "en_GB",
@@ -61,16 +62,16 @@ export const metadata: Metadata = {
         url: "/cats/Image3.jpg",
         width: 1200,
         height: 630,
-        alt: "A cat being cared for by Shortlegs-N-Paws",
+        alt: "A cat being cared for by Shortlegs-N-Paws in Glasgow",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Shortlegs-N-Paws | Cat Sitting Services",
+    title: "Shortlegs-N-Paws | Cat Sitting in Glasgow",
     description:
-      "Friendly home visits for cats. Reliable, calm care while you're away. From £14 per day.",
+      "Friendly home visits for cats in Glasgow. Reliable, calm care while you're away. From £14 per day.",
     images: ["/cats/Image3.jpg"],
   },
 
@@ -94,12 +95,14 @@ export default function RootLayout({
     url: siteUrl,
     image: `${siteUrl}/cats/Image3.jpg`,
     description:
-      "Friendly and reliable cat sitting services. Calm home visits to keep your cat happy, fed, and comfortable while you're away.",
+      "Friendly and reliable cat sitting in Glasgow. Calm home visits to keep your cat happy, fed, and comfortable while you're away.",
     areaServed: {
-      "@type": "Country",
-      name: "United Kingdom",
+      "@type": "City",
+      name: "Glasgow",
+      addressCountry: "GB",
     },
     priceRange: "From £14 per day",
+    serviceType: "Cat sitting",
   };
 
   return (
@@ -114,7 +117,9 @@ export default function RootLayout({
             __html: JSON.stringify(localBusinessJsonLd),
           }}
         />
+
         {children}
+
         {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>
