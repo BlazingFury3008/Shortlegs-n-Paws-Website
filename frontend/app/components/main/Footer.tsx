@@ -70,7 +70,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-amber-300" />
                 <a
-                  href="mailto:shortlegs_lisa@hotmail.co.uk"
+                  href="mailto:lisa@shortlegsnpaws.com"
                   className="transition hover:text-amber-300"
                 >
                   EMAIL
