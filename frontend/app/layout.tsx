@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Shortlegs-N-Paws | Cat Sitting in Glasgow",
-    template: "%s | Shortlegs-N-Paws",
+    default: "Shortlegs N' Paws | Cat Sitting in Glasgow",
+    template: "%s | Shortlegs N' Paws",
   },
 
   description:
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     "home cat visits Glasgow",
     "Glasgow cat sitter",
     "cat feeding Glasgow",
-    "Shortlegs-N-Paws",
+    "Shortlegs N' Paws",
   ],
 
-  authors: [{ name: "Shortlegs-N-Paws" }],
-  creator: "Shortlegs-N-Paws",
-  publisher: "Shortlegs-N-Paws",
+  authors: [{ name: "Shortlegs N' Paws" }],
+  creator: "Shortlegs N' Paws",
+  publisher: "Shortlegs N' Paws",
 
   alternates: {
     canonical: siteUrl,
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Shortlegs-N-Paws | Cat Sitting in Glasgow",
+    title: "Shortlegs N' Paws | Cat Sitting in Glasgow",
     description:
       "Calm, caring home visits for cats in Glasgow. Reliable cat sitting while you're away. From £14 per day.",
     url: siteUrl,
-    siteName: "Shortlegs-N-Paws",
+    siteName: "Shortlegs N' Paws",
     locale: "en_GB",
     type: "website",
     images: [
@@ -62,14 +62,14 @@ export const metadata: Metadata = {
         url: "/cats/Image3.jpg",
         width: 1200,
         height: 630,
-        alt: "A cat being cared for by Shortlegs-N-Paws in Glasgow",
+        alt: "A cat being cared for by Shortlegs N' Paws in Glasgow",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Shortlegs-N-Paws | Cat Sitting in Glasgow",
+    title: "Shortlegs N' Paws | Cat Sitting in Glasgow",
     description:
       "Friendly home visits for cats in Glasgow. Reliable, calm care while you're away. From £14 per day.",
     images: ["/cats/Image3.jpg"],
@@ -91,7 +91,7 @@ export default function RootLayout({
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "PetSitting",
-    name: "Shortlegs-N-Paws",
+    name: "Shortlegs N' Paws",
     url: siteUrl,
     image: `${siteUrl}/cats/Image3.jpg`,
     description:
