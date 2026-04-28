@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
 
+  verification: {
+    google: "SPxqfyxbTCJj6yaEJwsEe1c_ZTKZfnPRQClF6x66f64",
+  },
+
   openGraph: {
     title: "Shortlegs-N-Paws | Cat Sitting Services",
     description:
