@@ -80,22 +80,22 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
-
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
-          {gaId && <GoogleAnalytics gaId={gaId} />}
+      <body className="min-h-full flex flex-col">
+        {children}
+        {gaId && <GoogleAnalytics gaId={gaId} />}
+      </body>
     </html>
   );
 }
