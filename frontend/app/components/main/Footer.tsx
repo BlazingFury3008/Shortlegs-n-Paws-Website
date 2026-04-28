@@ -70,7 +70,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-amber-300" />
                 <a
-                  href="mailto:shortlegs_lisa@hotmail.co.uk"
+                  href="mailto:lisa@shortlegsnpaws.com"
                   className="transition hover:text-amber-300"
                 >
                   EMAIL
@@ -97,7 +97,6 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-stone-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Shortlegs-N-Paws. All rights reserved.</p>
 
           <div className="flex flex-wrap items-center gap-4">
             <a href="/privacy" className="transition hover:text-amber-300">

@@ -130,7 +130,7 @@ export default function FAQ() {
 
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
-                href="mailto:shortlegs_lisa@hotmail.co.uk?subject=Cat%20Sitting%20Enquiry"
+                href="mailto:lisa@shortlegsnpaws.com"
                 className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-amber-600"
               >
                 <Mail className="mr-2 h-4 w-4" />
