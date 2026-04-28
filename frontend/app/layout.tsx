@@ -87,12 +87,33 @@ export default function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "PetSitting",
+    name: "Shortlegs-N-Paws",
+    url: siteUrl,
+    image: `${siteUrl}/cats/Image3.jpg`,
+    description:
+      "Friendly and reliable cat sitting services. Calm home visits to keep your cat happy, fed, and comfortable while you're away.",
+    areaServed: {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+    priceRange: "From £14 per day",
+  };
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
+          }}
+        />
         {children}
         {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
