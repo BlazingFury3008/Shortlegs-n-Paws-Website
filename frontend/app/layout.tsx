@@ -19,30 +19,41 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Shortlegs N' Paws | Cat Sitting in Glasgow",
+    default: "Cat Sitting in Glasgow | Shortlegs N' Paws",
     template: "%s | Shortlegs N' Paws",
   },
 
   description:
-    "Friendly and reliable cat sitting in Glasgow. Calm home visits to keep your cat happy, fed, and comfortable while you're away. From £14 per day.",
+    "Reliable and friendly cat sitting in Glasgow. Calm home visits to keep your cat fed, comfortable, and stress-free while you're away. From £14 per day.",
 
   keywords: [
     "cat sitting Glasgow",
     "cat sitter Glasgow",
+    "home cat visits Glasgow",
     "pet sitting Glasgow",
     "cat care Glasgow",
-    "home cat visits Glasgow",
-    "Glasgow cat sitter",
-    "cat feeding Glasgow",
-    "Shortlegs N' Paws",
   ],
 
   authors: [{ name: "Shortlegs N' Paws" }],
   creator: "Shortlegs N' Paws",
   publisher: "Shortlegs N' Paws",
+  category: "Pet Services",
+  applicationName: "Shortlegs N' Paws",
 
   alternates: {
     canonical: siteUrl,
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   verification: {
@@ -50,7 +61,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Shortlegs N' Paws | Cat Sitting in Glasgow",
+    title: "Cat Sitting in Glasgow | Shortlegs N' Paws",
     description:
       "Calm, caring home visits for cats in Glasgow. Reliable cat sitting while you're away. From £14 per day.",
     url: siteUrl,
@@ -59,25 +70,26 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/cats/Image3.jpg",
+        url: `${siteUrl}/cats/Image3.jpg`,
         width: 1200,
         height: 630,
-        alt: "A cat being cared for by Shortlegs N' Paws in Glasgow",
+        alt: "Cat sitting service in Glasgow - Shortlegs N' Paws",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Shortlegs N' Paws | Cat Sitting in Glasgow",
+    title: "Cat Sitting in Glasgow | Shortlegs N' Paws",
     description:
-      "Friendly home visits for cats in Glasgow. Reliable, calm care while you're away. From £14 per day.",
-    images: ["/cats/Image3.jpg"],
+      "Friendly home visits for cats in Glasgow. Reliable and calm care while you're away.",
+    images: [`${siteUrl}/cats/Image3.jpg`],
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+    ],
   },
 };
 
@@ -95,14 +107,27 @@ export default function RootLayout({
     url: siteUrl,
     image: `${siteUrl}/cats/Image3.jpg`,
     description:
-      "Friendly and reliable cat sitting in Glasgow. Calm home visits to keep your cat happy, fed, and comfortable while you're away.",
+      "Reliable and friendly cat sitting in Glasgow. Calm home visits to keep your cat comfortable while you're away.",
+    priceRange: "££",
+
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Glasgow",
+      addressCountry: "GB",
+    },
+
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "55.8642",
+      longitude: "-4.2518",
+    },
+
     areaServed: {
       "@type": "City",
       name: "Glasgow",
-      addressCountry: "GB",
     },
-    priceRange: "From £14 per day",
-    serviceType: "Cat sitting",
+
+    serviceType: "Cat Sitting",
   };
 
   return (
